@@ -30,6 +30,7 @@
       public static void main(String[] args) throws Exception {
         // TODO Auto-generated method stub
     	Long exTime = System.nanoTime();
+    	//Mi ruta es: /Users/Maria/Desktop/Readme.txt
         String fileToEncrypt = "C:\\Users\\Alfredo\\Desktop\\test3.txt";
         String encryptedFile = "C:\\Users\\Alfredo\\Desktop\\test3.txt";
         String decryptedFile = "C:\\Users\\Alfredo\\Desktop\\test3.txt";

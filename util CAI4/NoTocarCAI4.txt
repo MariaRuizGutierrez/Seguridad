@@ -1,0 +1,10 @@
+1 y 2.Complejidad temporal (tiempo que tarda) en descrifrar y cifrar para cada uno de los algoritmos. 
+	
+	-Cifrar y descrifrar foto del escritorio y un archivo txt (Foto = 3.07 MB, TXT = mucho menor que la foto)
+
+3.Probar los algoritmos con tamaños de archivo mas grandes (hasta 100 MB), probando hasta que punto de tamaño un algoritmo no puede descifrar el archivo. 
+
+
+
+RSA en encriptar--> 0.97segundos
+RSA en desencriptar --> no se puede porque al encriptar el fichero mide 256 kbytes y el tamaño máximo es 244 kbytes

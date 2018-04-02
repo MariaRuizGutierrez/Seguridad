@@ -1,0 +1,4 @@
+#!c:\users\alfredo\pycharmprojects\pruebacai4\venv\scripts\python.exe
+# EASY-INSTALL-SCRIPT: 'crypto==1.4.1','decrypto'
+__requires__ = 'crypto==1.4.1'
+__import__('pkg_resources').run_script('crypto==1.4.1', 'decrypto')

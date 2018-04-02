@@ -1,0 +1,6 @@
+setup.py
+venv/CryptoPlus.egg-info/PKG-INFO
+venv/CryptoPlus.egg-info/SOURCES.txt
+venv/CryptoPlus.egg-info/dependency_links.txt
+venv/CryptoPlus.egg-info/requires.txt
+venv/CryptoPlus.egg-info/top_level.txt

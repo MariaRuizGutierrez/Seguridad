@@ -30,10 +30,9 @@
       public static void main(String[] args) throws Exception {
         // TODO Auto-generated method stub
     	Long exTime = System.nanoTime();
-    	//Mi ruta es: /Users/Maria/Desktop/Readme.txt
-        String fileToEncrypt = "C:\\Users\\Alfredo\\Desktop\\test3.txt";
-        String encryptedFile = "C:\\Users\\Alfredo\\Desktop\\test3.txt";
-        String decryptedFile = "C:\\Users\\Alfredo\\Desktop\\test3.txt";
+        String fileToEncrypt = "C:\\Users\\Alfredo\\Desktop\\100kb.jpg";
+        String encryptedFile = "C:\\Users\\Alfredo\\Desktop\\100kb.jpg";
+        String decryptedFile = "C:\\Users\\Alfredo\\Desktop\\100kb.jpg";
         // Generate a key-pair
         KeyPair keyPari = MyRSACipher.getRSAKeyPair();
         PublicKey publicKey = keyPari.getPublic();
@@ -51,11 +50,11 @@
         
         
         
-        // ---------------------------------------Decrypt the file--------------------------------------------
-        byte[] decryptedBytes = MyRSACipher.decryptFile(encryptedBytes, privatekey, algo);
-        file = new File(decryptedFile);
-        FileUtils.writeByteArrayToFile(file, decryptedBytes);
-        System.out.println("Decrypted file : " + decryptedFile);
-        System.out.println(System.nanoTime() - exTime);
+//        // ---------------------------------------Decrypt the file--------------------------------------------
+//        byte[] decryptedBytes = MyRSACipher.decryptFile(encryptedBytes, privatekey, algo);
+//        file = new File(decryptedFile);
+//        FileUtils.writeByteArrayToFile(file, decryptedBytes);
+//        System.out.println("Decrypted file : " + decryptedFile);
+//        System.out.println(System.nanoTime() - exTime);
       }
     }

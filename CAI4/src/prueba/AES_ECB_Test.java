@@ -16,14 +16,14 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-public class AESTest {
+public class AES_ECB_Test {
 
-   static void fileProcessor(int cipherMode,String key, String initVector,File inputFile,File outputFile) throws InvalidAlgorithmParameterException{
+   static void fileProcessor(int cipherMode,String key,File inputFile,File outputFile) throws InvalidAlgorithmParameterException{
 	 try {
-		   IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
+		   
 		   SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
-	       Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
-	       cipher.init(cipherMode, skeySpec,iv);
+	       Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
+	       cipher.init(cipherMode, skeySpec);
 
 	       FileInputStream inputStream = new FileInputStream(inputFile);
 	       byte[] inputBytes = new byte[(int) inputFile.length()];
@@ -46,15 +46,14 @@ public class AESTest {
 	
      public static void main(String[] args) {
     	 Long exTime = System.nanoTime();
-	String key = "This is a secret"; //128 bit key
-	 String initVector = "RandomInitVector";
-	 File inputFile = new File("C:\\Users\\Alfredo\\Desktop\\1500Kb.jpg");
-		File encryptedFile = new File("C:\\Users\\Alfredo\\Desktop\\1500Kb.jpg");
-		File decryptedFile = new File("C:\\Users\\Alfredo\\Desktop\\1500Kb.jpg");
+	String key = "This is a secret"; //128 bytes key
+	File inputFile = new File("C:\\Users\\Alfredo\\Desktop\\100kb.jpg");
+	File encryptedFile = new File("C:\\Users\\Alfredo\\Desktop\\100kb.jpg");
+	File decryptedFile = new File("C:\\Users\\Alfredo\\Desktop\\100kb.jpg");
 		
 	try {
-	     //AESTest.fileProcessor(Cipher.ENCRYPT_MODE,key,initVector,inputFile,encryptedFile);
-	     AESTest.fileProcessor(Cipher.DECRYPT_MODE,key,initVector,encryptedFile,decryptedFile);
+	     //AES_ECB_Test.fileProcessor(Cipher.ENCRYPT_MODE,key,inputFile,encryptedFile);
+	     AES_ECB_Test.fileProcessor(Cipher.DECRYPT_MODE,key,encryptedFile,decryptedFile);
 	     System.out.println("Sucess");
 	 } catch (Exception ex) {
 	     System.out.println(ex.getMessage());

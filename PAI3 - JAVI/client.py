@@ -21,7 +21,7 @@ conn.connect(("localhost", 443))
 
 print conn.recv(256) # Se extablece la conexion
 
-mensajeSecreto = raw_input("\nEscriba un mensaje secreto para el servidor.\nPara cerrar la conexion escriba 'adios'\n> ")
+mensajeSecreto = raw_input("\nEscriba un mensaje secreto para el servidor.\n> ")
 conn.send(mensajeSecreto)
 print conn.recv(256)
 
